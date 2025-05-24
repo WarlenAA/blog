@@ -1,0 +1,15 @@
+<h2>Editar Post</h2>
+
+{{#if error_msg}}
+  <p class="erro">{{error_msg}}</p>
+{{/if}}
+
+<form action="/posts/editar/{{post.id}}" method="POST">
+  <label for="titulo">Título:</label>
+  <input type="text" id="titulo" name="titulo" value="{{post.titulo}}" required />
+
+  <label for="conteudo">Conteúdo:</label>
+  <textarea id="conteudo" name="conteudo" rows="10" required>{{post.conteudo}}</textarea>
+
+  <button type="submit">Salvar</button>
+</form>

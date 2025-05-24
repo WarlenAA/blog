@@ -1,0 +1,40 @@
+<h2>Posts Recentes</h2>
+
+{{#if posts.length}}
+  {{#each posts}}
+    <article class="post">
+      <h3>{{this.titulo}}</h3>
+      <p>{{this.conteudo}}</p>
+      <p class="autor">Por {{this.Usuario.nome}} em {{formatarData this.createdAt}}</p>
+
+      {{#ifCond this.usuarioId ../user.id}}
+        <a href="/posts/editar/{{this.id}}">Editar</a>
+        <form action="/posts/deletar/{{this.id}}" method="POST" class="form-delete">
+          <button type="submit">Deletar</button>
+        </form>
+      {{/ifCond}}
+
+            <section class="comentarios">
+        <h4>Comentários:</h4>
+        {{#each this.Comments}}
+          <div class="comentario">
+            <p>{{this.texto}}</p>
+            <p class="autor">Por {{this.Usuario.nome}} em {{formatarData this.createdAt}}</p>
+          </div>
+        {{/each}}
+
+        {{#if ../user}}
+          <form action="/comments/criar" method="POST">
+            <input type="hidden" name="postId" value="{{id}}" />
+            <textarea name="texto" rows="2" placeholder="Escreva um comentário..." required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        {{else}}
+          <p><a href="/login">Faça login</a> para comentar</p>
+        {{/if}}
+      </section>
+    </article>
+  {{/each}}
+{{else}}
+  <p>Nenhum post disponível</p>
+{{/if}}

@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Layout geral */
+  body {
+    background-color: #f7f7f7;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header nav {
+    background-color: #007bff;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    flex: 1;
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    margin-top: 2rem;
+  }
+  
+  footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+  }
+  
+  /* Estilo das mensagens */
+  .erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+  
+  .sucesso {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+  
+  /* Formulários */
+  form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"],
+  form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    margin-top: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Posts */
+  .post {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+  }
+  
+  .post h3 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .post p.autor {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  /* Comentários */
+  .comentarios {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid #007bff;
+  }
+  
+  .comentario {
+    margin-bottom: 0.7rem;
+    font-style: italic;
+    color: #444;
+  }
+  
+  .form-delete {
+    display: inline;
+  }
+  
+  .form-delete button {
+    background-color: #dc3545;
+    margin-left: 10px;
+  }
+  
+  .form-delete button:hover {
+    background-color: #a71d2a;
+  }
+  

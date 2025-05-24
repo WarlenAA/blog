@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog de Ideias</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/posts">Home</a>
+      {{#if user}}
+        <a href="/posts/criar">Novo Post</a>
+        <a href="/logout">Sair ({{user.nome}})</a>
+      {{else}}
+        <a href="/login">Login</a>
+        <a href="/register">Registrar</a>
+      {{/if}}
+    </nav>
+  </header>
+
+  <main>
+    {{{ body }}}  <!-- Aqui é onde o conteúdo das views será injetado -->
+  </main>
+
+  <footer>
+    <p>Blog de Ideias &copy; 2025</p>
+  </footer>
+</body>
+</html>

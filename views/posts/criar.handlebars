@@ -1,0 +1,15 @@
+<h2>Criar Novo Post</h2>
+
+{{#if error_msg}}
+  <p class="erro">{{error_msg}}</p>
+{{/if}}
+
+<form action="/posts/criar" method="POST">
+  <label for="titulo">Título:</label>
+  <input type="text" id="titulo" name="titulo" required />
+
+  <label for="conteudo">Conteúdo:</label>
+  <textarea id="conteudo" name="conteudo" rows="10" required></textarea>
+
+  <button type="submit">Publicar</button>
+</form>
