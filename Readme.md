@@ -1,62 +1,99 @@
-Blog de Ideias
-Este é um projeto de blog desenvolvido em Node.js, Express, Sequelize (ORM para MySQL) e Handlebars (template engine).
+**📖 BLOG DE IDEIAS**
+
+Este é um projeto de blog desenvolvido em ***Node.js, Express, Sequelize*** (ORM para MySQL) e ***Handlebars*** (template engine).
 O sistema permite registro/login de usuários, postagem de textos, comentários, edição e deleção de posts.
 
-Pré-requisitos
-Node.js (recomendado: v20 ou superior)
+---
 
-NPM (já vem com o Node)
+**⚙️ Pré-requisitos**
+***Node.js*** (recomendado: v20 ou superior)
 
-XAMPP (para subir o MySQL local) ou outro MySQL instalado
+***NPM*** (já vem com o Node)
 
-MySQL Workbench (ou qualquer client para criar o banco)
+***XAMPP*** (para rodar o MySQL local) ou outro MySQL instalado
 
-Passo a Passo para Rodar o Projeto
-1. Clone o repositório
-git clone https://github.com/seu-usuario/seu-repo.git
-cd blog
-2. Instale as dependências
-npm install
-3. Configure o banco de dados
-Abra o XAMPP e inicie o serviço MySQL.
+***MySQL Workbench*** (ou qualquer client para criar o banco)
 
-Abra o MySQL Workbench (ou outro client) e crie um banco de dados chamado:
+---
 
-CREATE DATABASE banco_blog;
-O projeto já está configurado para usar o usuário padrão root sem senha.
+**🚀 Passo a Passo para Rodar o Projeto***
 
-Se você usa outro usuário ou senha, edite o arquivo .env conforme necessário:
+***1. Clone o repositório***
 
-DB_NAME=banco_blog
-DB_USER=root
-DB_PASS=
-PORT=3000
-Obs: Se seu MySQL não for local ou usa porta/host diferente, ajuste DB_HOST no .env.
+`git clone https://github.com/WarlenAA/blog.git`
 
-4. Rode o projeto localmente
+`cd blog`
 
-npm run dev
-O servidor vai rodar em: http://localhost:3000
+---
+
+***2. Instale as dependências***
+
+`npm install`
+
+---
+
+***3. Configure o banco de dados***
+
+Abra o ***XAMPP*** e inicie o serviço MySQL.
+
+Abra o ***MySQL Workbench*** (ou outro client) e crie um banco de dados chamado:
+
+`CREATE DATABASE banco_blog;`
+
+O projeto já está configurado para usar o usuário padrão `root` sem senha.
+
+Se você usa outro usuário ou senha, edite o arquivo `.env` na raiz do projeto conforme necessário:
+
+`DB_NAME=banco_blog`
+
+`DB_USER=root`
+
+`DB_PASS=`
+
+`PORT=3000`
+
+
+***Obs:*** Se seu MySQL não for local ou usa porta/host diferente, ajuste `DB_HOST` no `.env`.
+
+---
+
+***4. Rode o projeto localmente***
+
+`npm run dev`
+
+O servidor vai rodar em: 
+[http://localhost:3000](http://localhost:3000)
 
 Na primeira execução, as tabelas serão criadas automaticamente pelo Sequelize.
 
-5. Acesse no navegador
+---
+
+***5. Acesse no navegador***
+
 Registre um usuário, faça login, crie posts e comentários livremente!
 
-Observações
-Se quiser alterar a porta, usuário, senha ou nome do banco, basta editar o arquivo .env na raiz do projeto.
+---
 
-Se o MySQL não estiver rodando, o projeto não funcionará!
+💡 ***Observações***
+Se quiser alterar a porta, usuário, senha ou nome do banco, basta editar o arquivo `.env` na raiz do projeto.
+
+O MySQL precisa estar rodando para que o projeto funcione corretamente!
 
 O projeto já trata mensagens de erro para situações comuns.
 
-Scripts disponíveis
-npm run dev: Roda o projeto em modo de desenvolvimento (nodemon).
+---
 
-npm start: Roda o projeto normalmente.
+📜 ***Scripts disponíveis***
 
+`npm run dev`  → Roda o projeto em modo de desenvolvimento (nodemon).
 
-##ESTRUTURA DO PROJETO:##
+`npm start`              → Roda o projeto normalmente.
+
+---
+
+📁 ***Estrutura do Projeto***
+
+```
 blog/
 ├── controllers/               # Lógica das rotas (separação MVC)
 │   ├── authController.js
@@ -91,8 +128,12 @@ blog/
 │   │   ├── editar.handlebars
 │   │   └── home.handlebars
 │   └── error.handlebars       # Página de erro genérica
-├── .env                      # Variáveis de ambiente (ex: senha, secret)
+├── .env                       # Variáveis de ambiente (ex: senha, secret)
 ├── app.js                     # Arquivo principal (entrypoint do servidor)
 ├── package.json               # Configuração do npm, scripts e dependências
 ├── Readme.md
+```
+---
 
+📝 ***Licença***
+Este projeto é open-source para fins de estudo, aprendizado e portfólio.
